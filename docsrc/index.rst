@@ -1,0 +1,148 @@
+
+*********************************
+namedtuple - patched for defaults
+*********************************
+
+.. todolist::
+
+.. include:: index_part_abstract.rst
+   
+
+.. toctree::
+   :includehidden:
+   :caption: Shortcuts
+   :maxdepth: 1
+
+   self   
+   apidoc <index_part_cockpit>
+   apiref <index_part_apiref_scaled>
+
+.. toctree::
+   :includehidden:
+   :caption: Documentation
+   :numbered:
+   :maxdepth: 1
+   :glob:
+   
+   index_part_abstract
+   index_part_platform_support
+   index_part_blueprint
+   Command Line Interface <setuplib_cli>
+   configurations/index
+   index_part_documents
+   index_modules
+   index_part_indices
+   index_part_resources
+   install
+   references
+   index_part_license
+
+.. toctree::
+   :includehidden:
+   :caption: Application
+   :maxdepth: 1
+
+   howto/index
+   faq/index
+
+
+.. include:: index_part_resources.rst
+
+
+********
+Licenses
+********
+
+Product
+=======
+
+.. include:: project.rst
+
+
+
+.. only:: builder_html or builder_epub
+
+   |profileinfoidx0|  [xkcd]_ :ref:`Support the OpenSource Authors <PROFILEINFOPAGE>`
+   
+   .. |profileinfoidx0| imagewrap:: _static/profile_info.png 
+      :width: 64px
+      :target-html: index_part_license.html#profileinfopage
+
+.. only:: builder_singlehtml 
+
+   |profileinfoidx1| [xkcd]_ :ref:`Support the OpenSource Authors <PROFILEINFOPAGE>`
+
+   .. |profileinfoidx1| imagewrap:: _static/profile_info.png 
+      :width: 64px
+
+.. only:: not builder_singlehtml and not builder_html  and not builder_epub
+
+   |profileinfoidx2|  
+   
+   [xkcd]_ Support the OpenSource Authors
+
+   .. |profileinfoidx2| imagewrap:: _static/profile_info.png 
+
+
+
+.. raw:: html
+
+   <span style="page-break-after: always" />
+   
+This document
+=============
+
+.. _ModifiedArtisticLicense:
+
+Modified Artistic License
+-------------------------
+
+The :ref:`modified Artistic License <MODIFIED_ARTISTIC_LICENSE_20>`
+is based on the ArtisticLicense2.0, but
+adds the amendmend of "Forced-Fairplay-Constraints" for peer-to-peer fairplay
+rules.
+The modification restricts, and even revokes the permission including the open source attribution
+in case of breaches, including the past.
+   
+   .. parsed-literal::
+   
+      License:ModifiedArtisticLicense2.0 = ArtisticLicense2.0 + Forced-Fairplay-Constraints 
+      From Ingenieurbuero Arno-Can Uestuensoez
+      Name  ModifiedArtisticLicense2.0
+
+This is perfectly allright, as you may refer to cases like the faith of Andreas Pavel [AndreasPavel]_,
+or even my own - UnifiedSessionsManager (C) 2008 Arno-Can Uestuensoez [UnifiedSessionsManager]_ - the
+first multivendor cloud management system, capable of distributed hybrid clouds including virtual desktops.
+The *UnifiedSessionsManager* was originally licensed as *GPL3*. 
+
+So the software is OpenSource as long as you comply to basic rules - else not.
+
+* Artistic-License-2.0(base license): :ref:`ArtisticLicense20 <ARTISTIC_LICENSE_20>`
+
+* Forced-Fairplay-Constraints(amendments): :ref:`licenses-amendments <LICENSES_AMENDMENTS>` 
+
+The Patches
+===========
+
+The patches are provided:
+
+#. for the original author of the patched code:
+   
+   |ccby|
+   
+   Creative Commons license - CC BY [CCBY]_ - requires 
+   to add the authors name and the preservation of the license of the patches
+   for derived works of any level.
+
+#. for others - commercial and private:
+
+   see the :ref:`Modified Artistic License <ModifiedArtisticLicense>`
+   
+.. |ccby| imagewrap:: _static/CC-BY_icon.svg.png 
+   :width: 128px
+   :target-html: index_part_license.html#profileinfopage
+
+The Original Code and Documentation
+===================================
+
+The original license is preserved for the used parts of the original artifacts.
