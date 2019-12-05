@@ -68,7 +68,7 @@ __copyright__ = "Copyright (C) 2019 Arno-Can Uestuensoez" \
                 " @Ingenieurbuero Arno-Can Uestuensoez"
 __uuid__ = "19683f50-48f2-4e1e-953f-640455e97340"
 
-__vers__ = [0, 1, 14,]
+__vers__ = [0, 1, 15,]
 __version__ = "%02d.%02d.%03d"%(__vers__[0],__vers__[1],__vers__[2],)
 
 
