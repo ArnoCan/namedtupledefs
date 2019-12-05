@@ -3,6 +3,9 @@
 namedtuple - patched for support of field defaults for Python3
 **************************************************************
 
+For the release for Python2 refer to *namedtupledefs2* [namedtupledefs2]_.
+For the standard library *collections.namedtuple* see Python documentation [namedtuple]_.
+
 .. todolist::
 
 .. include:: index_part_abstract.rst
