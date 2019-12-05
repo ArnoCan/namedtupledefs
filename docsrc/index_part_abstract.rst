@@ -36,5 +36,4 @@ The *namedtupledefs* package introduces:
 For an overview with additional details refer to the following section :ref:`Blueprint <INDEX_BLUEPRINT>`.
 
 For the standard library *collections.namedtuple* see Python documentation [namedtuple]_.
-For the release for Python2 refer to 
-*namedtupledefs2* [namedtupledefs2]_.
+For the release for Python2 refer to *namedtupledefs2* [namedtupledefs2]_.
