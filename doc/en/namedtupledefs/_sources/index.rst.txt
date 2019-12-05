@@ -1,7 +1,7 @@
 
-*********************************
-namedtuple - patched for defaults
-*********************************
+**************************************************************
+namedtuple - patched for support of field defaults for Python3
+**************************************************************
 
 .. todolist::
 
@@ -15,7 +15,6 @@ namedtuple - patched for defaults
 
    self   
    apidoc <index_part_cockpit>
-   apiref <index_part_apiref_scaled>
 
 .. toctree::
    :includehidden:
@@ -27,15 +26,10 @@ namedtuple - patched for defaults
    index_part_abstract
    index_part_platform_support
    index_part_blueprint
-   Command Line Interface <setuplib_cli>
-   configurations/index
    index_part_documents
-   index_modules
-   index_part_indices
    index_part_resources
    install
    references
-   index_part_license
 
 .. toctree::
    :includehidden:
@@ -53,22 +47,14 @@ namedtuple - patched for defaults
 Licenses
 ********
 
-Original Code
-=============
-Same as the original license.
-Here as provided by the standard library *collections*.
 
-Patches Integrated into Python Standard Library Collections
-===========================================================
-When integrated into the original standard library the license of the original
-library.
+.. raw:: html
 
-Patches By This Package
-=======================
+   <span style="page-break-after: always" />
+   
+
 
 .. include:: project.rst
-
-
 
 .. only:: builder_html or builder_epub
 
@@ -93,14 +79,48 @@ Patches By This Package
 
    .. |profileinfoidx2| imagewrap:: _static/profile_info.png 
 
+The Original Code and Documentation
+===================================
 
-When downloaded as a separate library - this package, the following applies.
+The original license is preserved for the used parts of the original artifacts.
 
+The Patches
+===========
 
-.. raw:: html
+The patches are provided by two licenses.
 
-   <span style="page-break-after: always" />
+For the Original Author
+-----------------------
+
+For the original author of the patched code:
+
+   The same license as the original code.
+
+For Others
+----------
+For others - commercial and private:
+
+   see the :ref:`Modified Artistic License <ModifiedArtisticLicense>`
    
+   
+This document
+=============
+
+For this document - either as a whole or partial:
+
+   |ccby|
+   
+   Creative Commons license - CC BY [CCBY]_ - requires 
+   to add the authors name and the preservation of the license of the patches
+   for derived works of any level.
+
+.. |ccby| imagewrap:: _static/CC-BY_icon.svg.png 
+   :width: 128px
+   :target-html: index_part_license.html#profileinfopage
+
+
+.. _ModifiedArtisticLicense:
+
 Modified Artistic License
 =========================
 
@@ -128,3 +148,9 @@ So the software is OpenSource as long as you comply to basic rules - else not.
 
 * Forced-Fairplay-Constraints(amendments): :ref:`licenses-amendments <LICENSES_AMENDMENTS>` 
 
+
+
+.. raw:: html
+
+   <span style="page-break-after: always" />
+   
