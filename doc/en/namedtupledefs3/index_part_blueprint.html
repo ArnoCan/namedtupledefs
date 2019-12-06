@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Blueprint &#8212; namedtupledefs  documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Documents" href="index_part_documents.html" />
+    <link rel="prev" title="2. Platform Support" href="index_part_platform_support.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/py.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index_part_documents.html" title="4. Documents"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index_part_platform_support.html" title="2. Platform Support"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="blueprint">
+<h1>3. Blueprint<a class="headerlink" href="#blueprint" title="Permalink to this headline">¶</a></h1>
+<p id="reference-architecture">The package ‘namedtupledefs’ provides a patched version of the <em>collections.namedtuple</em>
+with field defaults for <em>namedtuple</em>. This is a drop-in compatible patch with minimal
+changes only - basically one line in the class template only.</p>
+<p>Just use:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">namedtupledefs</span>
+
+<span class="n">Point0</span> <span class="o">=</span> <span class="n">namedtupledefs</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">))</span>
+<span class="n">Point1</span> <span class="o">=</span> <span class="n">namedtupledefs</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">))</span>
+
+<span class="n">point0</span> <span class="o">=</span> <span class="n">Point0</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+<span class="n">point1</span> <span class="o">=</span> <span class="n">Point1</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>the same with defaults:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">namedtupledefs</span> <span class="k">import</span> <span class="n">namedtuple</span>
+
+<span class="n">Point0defs</span> <span class="o">=</span> <span class="n">namedtupledefs</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point0&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">))</span>
+<span class="n">Point1defs</span> <span class="o">=</span> <span class="n">namedtupledefs</span><span class="o">.</span><span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Point1&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;x y z&#39;</span><span class="p">),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">))</span>
+
+<span class="n">point0defs</span> <span class="o">=</span> <span class="n">Point0</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">)</span>
+<span class="n">point1defs</span> <span class="o">=</span> <span class="n">Point1</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>with the identical results:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">point0defs</span> <span class="o">==</span> <span class="n">point0</span>
+<span class="n">point1defs</span> <span class="o">==</span> <span class="n">point1</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>of the printout:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">point0</span>
+<span class="go">Point0(x=11, y=22, z=33)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point0defs</span>
+<span class="go">Point0(x=11, y=22, z=33)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point1</span>
+<span class="go">Point1(x=11, y=22, z=33)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point1defs</span>
+<span class="go">Point1(x=11, y=22, z=33)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>For merging multiple <em>namedtuple</em> results into one of type named tuple:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">point0</span>
+<span class="go">Point0(a=11, b=22, c=33)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point1</span>
+<span class="go">Point1(d=44, e=55)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point2</span>
+<span class="go">Point1(f=66)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">psum</span> <span class="o">=</span> <span class="n">point0</span><span class="o">.</span><span class="n">_merge</span><span class="p">(</span><span class="s1">&#39;PointSum&#39;</span><span class="p">,</span> <span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">)</span>
+<span class="go">PointSum(a=11, b=22, c=33, d=44, e=55, f=66)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The next example shows the assembly of a <em>URL</em> which is processed into seperate parts,
+and finally concatenated into one named tuple.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># example: RFC3986 - 3. Syntax Components</span>
+<span class="n">Scheme</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Scheme&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;scheme&#39;</span><span class="p">,),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">,),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">HierPart</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;HierPart&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;authority&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">))</span>
+<span class="n">Query</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Query&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="p">),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;ferret&#39;</span><span class="p">,))</span>
+<span class="n">Fragment</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Fragment&#39;</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;f0&#39;</span><span class="p">,</span> <span class="p">),</span> <span class="n">fielddefaults</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;nose&#39;</span><span class="p">,))</span>
+
+
+<span class="n">scheme</span> <span class="o">=</span> <span class="n">Scheme</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">scheme</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">,))</span>
+
+<span class="n">hier_part</span> <span class="o">=</span> <span class="n">HierPart</span><span class="p">(</span><span class="s1">&#39;example.com:8042&#39;</span><span class="p">,</span> <span class="s1">&#39;/over/there&#39;</span><span class="p">,</span> <span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">hier_part</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;example.com:8042&#39;</span><span class="p">,</span> <span class="s1">&#39;/over/there&#39;</span><span class="p">,</span> <span class="p">))</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="n">Query</span><span class="p">(</span><span class="s1">&#39;ferret&#39;</span><span class="p">,)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;ferret&#39;</span><span class="p">,))</span>
+
+<span class="n">fragment</span> <span class="o">=</span> <span class="n">Fragment</span><span class="p">()</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">fragment</span><span class="p">,</span> <span class="p">(</span><span class="s1">&#39;nose&#39;</span><span class="p">,))</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="n">scheme</span><span class="o">.</span><span class="n">_merge</span><span class="p">(</span><span class="s1">&#39;MyURI&#39;</span><span class="p">,</span> <span class="n">hier_part</span><span class="p">,</span> <span class="n">query</span><span class="p">,</span> <span class="n">fragment</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span>
+   <span class="n">url</span><span class="p">,</span>
+   <span class="p">(</span><span class="s1">&#39;https&#39;</span><span class="p">,</span> <span class="s1">&#39;example.com:8042&#39;</span><span class="p">,</span> <span class="s1">&#39;/over/there&#39;</span><span class="p">,</span> <span class="s1">&#39;ferret&#39;</span><span class="p">,</span> <span class="s1">&#39;nose&#39;</span><span class="p">,)</span>
+<span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span> <span class="s1">&#39;MyURI&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>See doc-string for more examples.</p>
+<p>The contained interfaces are:</p>
+<ul>
+<li><p><strong>namedtupledefs.namedtuple</strong>:</p>
+<p>The drop-in replacement of <em>collections.namedtuple</em> with optional default values.</p>
+</li>
+</ul>
+<p>For the standard library <em>collections.namedtuple</em> see Python documentation <a class="reference internal" href="references.html#namedtuple" id="id1"><span>[namedtuple]</span></a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index_part_platform_support.html"
+                        title="previous chapter">2. Platform Support</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="index_part_documents.html"
+                        title="next chapter">4. Documents</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index_part_blueprint.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index_part_documents.html" title="4. Documents"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index_part_platform_support.html" title="2. Platform Support"
+             >previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> Copyright (C) 2010-2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on None.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0.
+    </div>
+
+  </body>
+</html>

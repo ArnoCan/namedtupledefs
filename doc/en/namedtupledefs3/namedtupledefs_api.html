@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>4.2. The namedtupledefs API &#8212; namedtupledefs  documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4.3. namedtupledefs.__init__" href="namedtupledefs_init.html" />
+    <link rel="prev" title="4.1. The SW-Design of namedtupledefs" href="sw_design.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/py.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="namedtupledefs_init.html" title="4.3. namedtupledefs.__init__"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="sw_design.html" title="4.1. The SW-Design of namedtupledefs"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+          <li class="nav-item nav-item-1"><a href="index_part_documents.html" accesskey="U">4. Documents</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="the-namedtupledefs-api">
+<span id="namedtupledefsapi"></span><h1>4.2. The namedtupledefs API<a class="headerlink" href="#the-namedtupledefs-api" title="Permalink to this headline">¶</a></h1>
+<p>The <em>namedtupledefs</em> API covers a variety of interfaces for the processing of
+resource path addresses, and the search of resources.
+The initial set of interfaces forcusses on filesystem resources in a basic distributed
+environment.
+This covers in particular a basic set of call parameters, which are common for a
+subset of the call interfaces.</p>
+<style>
+   div.apisynopsislarge blockquote {
+      font-size: 1.5ch;
+   }
+</style>
+
+<div class="apisynopsislarge">
+<div class="apisynopsis"><ul>
+<li><p><strong>factory functions</strong></p>
+<blockquote>
+<div><pre class="literal-block"><a class="reference internal" href="namedtupledefs_init.html#api-namedtuple"><span class="std std-ref">namedtuple</span></a></pre>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div><div class="section" id="class-options-by-interfaces">
+<h2>4.2.1. Class Options by Interfaces<a class="headerlink" href="#class-options-by-interfaces" title="Permalink to this headline">¶</a></h2>
+<p><strong>Basic Application API</strong></p>
+<p>The following table displays the parameters supported by the interfaces.</p>
+<blockquote>
+<div><div class="tabcolumncolor">
+<div class="nonbreakheadtab">
+<div class="autocoltab"><table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 24%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>interface</p></th>
+<th class="head"><p>collections.namedtuple</p></th>
+<th class="head"><p><a class="reference internal" href="namedtupledefs_init.html#api-namedtuple"><span class="std std-ref">namedtupledefs.namedtuple</span></a></p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>parameters</p></th>
+<th class="head"><p><a class="reference internal" href="references.html#namedutple-python3" id="id1"><span>[namedutple-python3]</span></a></p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#param-fieldnames"><span class="std std-ref">fieldnames</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#param-fielddefaults"><span class="std std-ref">fielddefaults</span></a> (1)</p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">–</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#param-module"><span class="std std-ref">module</span></a> (2)</p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#param-rename"><span class="std std-ref">rename</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#param-typename"><span class="std std-ref">typename</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#param-verbose"><span class="std std-ref">verbose</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+<td><p><a class="reference internal" href="#return-namedtuple"><span class="std std-ref">c</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div></div>
+</div>
+</div><p><strong>c</strong>:</p>
+<p>Parameter as call parameters.
+For example the parameters <strong>rename</strong> and <strong>fielddefaults</strong> are used by
+the factory <em>namedtupledefs.namedtuple()</em> for the creation of the extended tuple
+class template as well as for the creation of the class.
+E.g.:</p>
+<blockquote>
+<div><pre class="literal-block">namedtupledefs.abc.namedtupledefs(
+   'MyClass',                              # processed by <em>namedtuple</em>
+   ('a', 'b',),                            # processed by <em>namedtuple</em>
+   rename=True,                            # processed by <em>namedtuple</em>
+   fielddefaults=(11, 22)                  # processed by <strong>__new__</strong> for class and instance creation
+)</pre>
+</div></blockquote>
+</div></blockquote>
+<dl class="simple">
+<dt><strong>(1)</strong>:</dt><dd><p>Depends on the actual <em>tuplefactory</em>.</p>
+</dd>
+<dt><strong>(2)</strong>:</dt><dd><p>Depends on the implementation, <em>Python3.6+</em>.</p>
+</dd>
+</dl>
+</div></blockquote>
+<p id="namedtupledefsapi-parameters"><strong>Parameters</strong></p>
+<div class="section" id="fieldnames">
+<span id="param-fieldnames"></span><span id="index-0"></span><h3>4.2.1.1. fieldnames<a class="headerlink" href="#fieldnames" title="Permalink to this headline">¶</a></h3>
+<p>Symbolic names of fields with identical semantics as the standard library <em>collections.namedtuple</em>.
+When used in combination with the parameter <em>fielddefaults</em> the semantics changes to the behaviour
+of function parameters with default values, see <a class="reference internal" href="references.html#pyfunc" id="id2"><span>[PYFUNC]</span></a>.</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fieldnames</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">field</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">fieldnames</span><span class="o">&gt;</span><span class="p">]</span> <span class="s1">&#39;)&#39;</span>
+<span class="n">field</span><span class="o">-</span><span class="n">name</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">valid</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">one</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">field</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">tail</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">field</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">tail</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">valid</span><span class="o">-</span><span class="n">character</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="n">field</span><span class="o">-</span><span class="n">name</span><span class="o">-</span><span class="n">tail</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">valid</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">one</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="n">zA</span><span class="o">-</span><span class="n">Z</span><span class="p">]</span>
+<span class="n">valid</span><span class="o">-</span><span class="n">character</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">-</span><span class="n">zA</span><span class="o">-</span><span class="n">Z_0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id3"><span>[namedtuple]</span></a>.</p>
+</div>
+<div class="section" id="fielddefaults">
+<span id="param-fielddefaults"></span><span id="index-1"></span><h3>4.2.1.2. fielddefaults<a class="headerlink" href="#fielddefaults" title="Permalink to this headline">¶</a></h3>
+<p>Optional support for default values of <em>fieldnames</em>.
+A list of values.
+Same semantics as the function call interfaces <a class="reference internal" href="references.html#pyfunc" id="id4"><span>[PYFUNC]</span></a>,</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fielddefaults</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">item</span><span class="o">-</span><span class="n">default</span><span class="o">&gt;</span> <span class="p">[,</span> <span class="o">&lt;</span><span class="n">fielddefaults</span><span class="o">&gt;</span><span class="p">]</span> <span class="s1">&#39;)&#39;</span>
+<span class="n">item</span><span class="o">-</span><span class="n">default</span> <span class="p">:</span><span class="o">=</span> <span class="s1">&#39;(&#39;</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span> <span class="s1">&#39;)&#39;</span>
+<span class="n">key</span> <span class="p">:</span><span class="o">=</span> <span class="p">(</span><span class="o">&lt;</span><span class="n">item</span><span class="o">-</span><span class="n">index</span><span class="o">&gt;</span> <span class="o">|</span> <span class="o">&lt;</span><span class="n">item</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span><span class="p">)</span>
+<span class="n">value</span> <span class="p">:</span><span class="o">=</span> <span class="o">&lt;</span><span class="n">default</span><span class="o">-</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="module">
+<span id="param-module"></span><span id="index-2"></span><h3>4.2.1.3. module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h3>
+<p>Sets ‘<em>__module__</em>’ of the created class definition.
+Available beginning with <em>Python-3.6</em>.</p>
+<p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id6"><span>[namedtuple]</span></a>.</p>
+</div>
+<div class="section" id="rename">
+<span id="param-rename"></span><span id="index-3"></span><h3>4.2.1.4. rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
+<p>If <em>True</em> replaces silently invalid field names by
+‘<em>_&lt;item-index&gt;</em>’.
+Available beginning with <em>Python-2.7</em>, in <em>Python3</em> beginning with  <em>Python-3.1</em> - so not in <em>Python-3.0</em>.</p>
+<p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id8"><span>[namedtuple]</span></a>.</p>
+</div>
+<div class="section" id="typename">
+<span id="param-typename"></span><span id="index-4"></span><h3>4.2.1.5. typename<a class="headerlink" href="#typename" title="Permalink to this headline">¶</a></h3>
+<p>Name of returned class of type <em>namedtuple</em>.
+The actual registered top-level base class is <em>namedtupledefsABC</em> - underneath <em>object</em> of course.</p>
+<p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id10"><span>[namedtuple]</span></a>.</p>
+</div>
+<div class="section" id="verbose">
+<span id="param-verbose"></span><span id="index-5"></span><h3>4.2.1.6. verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
+<p>Prints created class definition.</p>
+<p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id12"><span>[namedtuple]</span></a>.</p>
+<p>The call interface provides for groups of functions and classes with a set of
+common parameters and additional context specific modifications.</p>
+<p>The provided function sets comprise the categories:</p>
+<ul class="simple">
+<li><p>Filesystem Positions and Navigation</p></li>
+<li><p>Canonical Node Address</p></li>
+</ul>
+<p>Various common options are supported, which may not be available for each interface.</p>
+</div>
+</div>
+<div class="section" id="created-named-tuple-class">
+<span id="return-namedtuple"></span><h2>4.2.2. Created Named Tuple Class<a class="headerlink" href="#created-named-tuple-class" title="Permalink to this headline">¶</a></h2>
+<p>The created named tuple class is extended by the default values <em>fielddefaults</em>,
+which is coverd by the creation interface.</p>
+<p>In addition the method “<a class="reference internal" href="namedtupledefs_init.html#dynamiccreatednamedtuple"><span class="std std-ref">_merge</span></a>” is added
+to the template, which supports the type-accurate merge of named tuples.
+The standard <em>collections.tuple</em> returns for the addition(merge) of named tuples
+the base class <em>tuple</em>, while the <em>namedtupledef.namedtuple</em> returns a new instance
+of merged classes as a named tuple including combined default values.</p>
+</div>
+<div class="section" id="resources">
+<span id="namedtupledefs-references"></span><h2>4.2.3. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="references.html#namedtuple" id="id13"><span>[namedtuple]</span></a> namedtuple - The Python Standard Library - lib/collections</p></li>
+<li><p><a class="reference internal" href="references.html#pyfunc" id="id14"><span>[PYFUNC]</span></a> The Python Language Reference - Function definitions</p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4.2. The namedtupledefs API</a><ul>
+<li><a class="reference internal" href="#class-options-by-interfaces">4.2.1. Class Options by Interfaces</a><ul>
+<li><a class="reference internal" href="#fieldnames">4.2.1.1. fieldnames</a></li>
+<li><a class="reference internal" href="#fielddefaults">4.2.1.2. fielddefaults</a></li>
+<li><a class="reference internal" href="#module">4.2.1.3. module</a></li>
+<li><a class="reference internal" href="#rename">4.2.1.4. rename</a></li>
+<li><a class="reference internal" href="#typename">4.2.1.5. typename</a></li>
+<li><a class="reference internal" href="#verbose">4.2.1.6. verbose</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#created-named-tuple-class">4.2.2. Created Named Tuple Class</a></li>
+<li><a class="reference internal" href="#resources">4.2.3. Resources</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="sw_design.html"
+                        title="previous chapter">4.1. The SW-Design of <em>namedtupledefs</em></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="namedtupledefs_init.html"
+                        title="next chapter">4.3. namedtupledefs.__init__</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/namedtupledefs_api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="namedtupledefs_init.html" title="4.3. namedtupledefs.__init__"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="sw_design.html" title="4.1. The SW-Design of namedtupledefs"
+             >previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+          <li class="nav-item nav-item-1"><a href="index_part_documents.html" >4. Documents</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> Copyright (C) 2010-2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on None.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0.
+    </div>
+
+  </body>
+</html>

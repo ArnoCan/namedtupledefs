@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>1. Abstract &#8212; namedtupledefs  documentation</title>
+    <link rel="stylesheet" href="_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pydoctheme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Platform Support" href="index_part_platform_support.html" />
+    <link rel="prev" title="namedtupledefs3 - field defaults for Python3" href="index.html" />
+    <link rel="shortcut icon" type="image/png" href="_static/py.png" />
+    
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    
+     
+
+  </head><body>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index_part_platform_support.html" title="2. Platform Support"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="namedtupledefs3 - field defaults for Python3"
+             accesskey="P">previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="abstract">
+<h1>1. Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h1>
+<p>The <em>namedtupledefs</em> package provides a patched version of the original <em>collections.namedtuple</em>.
+The <em>namedtupledefs</em> package introduces:</p>
+<ul>
+<li><p><em>field defaults</em></p>
+<blockquote>
+<div><p>Default values for the fields in function style see <a class="reference internal" href="references.html#pyfunc" id="id1"><span>[PYFUNC]</span></a>
+The implementation is pure dynamic by generated default values for the method <em>__new__</em>, thus has
+no impact on the created <em>namedtuple</em> class. Neither on resources, nor on performance.
+See <span class="xref std std-ref">API_NEW</span>.</p>
+</div></blockquote>
+</li>
+<li><p><em>merge</em></p>
+<blockquote>
+<div><p>In addition the method <em>_merge</em> is added to the created named tuple class.
+This provides the concatination of multiple results from <em>namedtuple</em> into a
+new instance of a new class. See <span class="xref std std-ref">API_MERGE</span>, <a class="reference internal" href="namedtupledefs_init.html#code-python2"><span class="std std-ref">Python2</span></a>,
+and <a class="reference internal" href="namedtupledefs_init.html#code-python3"><span class="std std-ref">Python3</span></a>.</p>
+</div></blockquote>
+</li>
+</ul>
+<div class="figure align-center" id="id4" style="width: 650px">
+<span id="figure-structure"></span><a class="reference external image-reference" href="_static/structure.png"><img alt="_images/structure.png" src="_images/structure.png" /></a>
+<p class="caption"><span class="caption-text">Figure: Class Diagram of namedtupledefs <a class="reference external" href="_static/structure.png"><img alt="zoom" src="_images/zoom.png" style="width: 16px;" /></a> <a class="reference internal" href="index_part_blueprint.html#reference-architecture"><span class="std std-ref">more…</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>For an overview with additional details refer to the following section <span class="xref std std-ref">Blueprint</span>.</p>
+<p>For the standard library <em>collections.namedtuple</em> see Python documentation <a class="reference internal" href="references.html#namedtuple" id="id2"><span>[namedtuple]</span></a>.
+For the release for Python2 refer to <em>namedtupledefs2</em> <a class="reference internal" href="references.html#namedtupledefs2" id="id3"><span>[namedtupledefs2]</span></a>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">namedtupledefs3 - field defaults for Python3</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="index_part_platform_support.html"
+                        title="next chapter">2. Platform Support</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index_part_abstract.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index_part_platform_support.html" title="2. Platform Support"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="namedtupledefs3 - field defaults for Python3"
+             >previous</a> |</li>
+    <li><img src="_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+    <a href="index.html">namedtupledefs  documentation</a> &#187;
+    
+
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="copyright.html">Copyright</a> Copyright (C) 2010-2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on None.
+    
+    <br />
+
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 2.2.0.
+    </div>
+
+  </body>
+</html>
