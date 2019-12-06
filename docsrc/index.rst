@@ -1,50 +1,25 @@
 
-*********************************
-namedtuple - patched for defaults
-*********************************
+********************************************
+namedtupledefs3 - field defaults for Python3
+********************************************
+
+The *namedtupledefs3* is the same as *namedtupledefs* - if you prefer ReadTheDocs-style see *namedtupledefs* @ [namedtupledefs]_.
+The *namedtupledefs* is tested and released for *Python3.5+* - should work on all *Python3*.
+For the release for Python2 refer to *namedtupledefs2* [namedtupledefs2]_.
+For the standard library *collections.namedtuple* see Python documentation [namedtuple]_.
+
 
 .. todolist::
 
 .. include:: index_part_abstract.rst
-   
 
-.. toctree::
-   :includehidden:
-   :caption: Shortcuts
-   :maxdepth: 1
+.. include:: index_starthere.rst
 
-   self   
-   apidoc <index_part_cockpit>
-   apiref <index_part_apiref_scaled>
+.. include:: index_part_cockpit.rst
 
-.. toctree::
-   :includehidden:
-   :caption: Documentation
-   :numbered:
-   :maxdepth: 1
-   :glob:
-   
-   index_part_abstract
-   index_part_platform_support
-   index_part_blueprint
-   Command Line Interface <setuplib_cli>
-   configurations/index
-   index_part_documents
-   index_modules
-   index_part_indices
-   index_part_resources
-   install
-   references
-   index_part_license
+.. include:: index_documentation.rst
 
-.. toctree::
-   :includehidden:
-   :caption: Application
-   :maxdepth: 1
-
-   howto/index
-   faq/index
-
+.. include:: index_application.rst
 
 .. include:: index_part_resources.rst
 
@@ -53,12 +28,13 @@ namedtuple - patched for defaults
 Licenses
 ********
 
-Product
-=======
+.. raw:: html
+
+   <span style="page-break-after: always" />
+   
+
 
 .. include:: project.rst
-
-
 
 .. only:: builder_html or builder_epub
 
@@ -83,19 +59,49 @@ Product
 
    .. |profileinfoidx2| imagewrap:: _static/profile_info.png 
 
+**The Original Code and Documentation**
 
+The original license is preserved for the used parts of the original artifacts.
 
-.. raw:: html
+**The Patches**
 
-   <span style="page-break-after: always" />
+The patches are provided by two licenses.
+
+* *For the Original Author*
+
+   For the original author of the patched code:
    
-This document
-=============
+      The same license as the original code.
+
+* *For Others*
+
+   For others - commercial and private:
+   
+      see the :ref:`Modified Artistic License <ModifiedArtisticLicense>`
+   
+   
+**Configuration Files**
+
+The configuration files 0 if not noted else - are licensed by  :ref:`MIT License <MIT_LICENSE>`.
+
+**This document**
+
+For this document - either as a whole or partial:
+
+   |ccby|
+   
+   Creative Commons license - CC BY [CCBY]_ - requires 
+   to add the authors name and the preservation of the license of the patches
+   for derived works of any level.
+
+.. |ccby| imagewrap:: _static/CC-BY_icon.svg.png 
+   :width: 128px
+   :target-html: index_part_license.html#profileinfopage
+
 
 .. _ModifiedArtisticLicense:
 
-Modified Artistic License
--------------------------
+**Modified Artistic License**
 
 The :ref:`modified Artistic License <MODIFIED_ARTISTIC_LICENSE_20>`
 is based on the ArtisticLicense2.0, but
@@ -121,28 +127,14 @@ So the software is OpenSource as long as you comply to basic rules - else not.
 
 * Forced-Fairplay-Constraints(amendments): :ref:`licenses-amendments <LICENSES_AMENDMENTS>` 
 
-The Patches
-===========
 
-The patches are provided:
 
-#. for the original author of the patched code:
+.. raw:: html
+
+   <span style="page-break-after: always" />
    
-   |ccby|
-   
-   Creative Commons license - CC BY [CCBY]_ - requires 
-   to add the authors name and the preservation of the license of the patches
-   for derived works of any level.
 
-#. for others - commercial and private:
 
-   see the :ref:`Modified Artistic License <ModifiedArtisticLicense>`
-   
-.. |ccby| imagewrap:: _static/CC-BY_icon.svg.png 
-   :width: 128px
-   :target-html: index_part_license.html#profileinfopage
+.. raw:: html
 
-The Original Code and Documentation
-===================================
-
-The original license is preserved for the used parts of the original artifacts.
+   <span style="page-break-after: always" />

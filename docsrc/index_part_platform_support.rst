@@ -3,8 +3,10 @@ Platform Support
 
 The supported Python versions are:
 
-* Core syntax: `Python2.7+, Python3.5+ <install.html#>`_ - see [pythonids]_
-* Implementations: `CPython, PyPy, IPython, Jython, IronPython <install.html#>`_ - see [pythonids]_
+* Core syntax: `Python3.5+ <install.html#>`_ - see [pythonids]_,
+  for *Python2* syntax refer to  [namedtupledefs2]_.
+* Implementations: `CPython, PyPy, IPython <install.html#>`_ - see [pythonids]_
+  *Jython* and *IronPython* will be supported as soon as released with *Python3* syntax.
 
 The supported platforms are:
 

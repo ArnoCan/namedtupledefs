@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.1.36
+                0.1.20
               </div>
             
           
@@ -93,7 +93,7 @@
             
               <p class="caption"><span class="caption-text">Shortcuts</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">namedtuple - patched for support of field defaults for Python3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">namedtupledefs - field defaults for Python3</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index_part_cockpit.html">apidoc</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Documentation</span></p>
@@ -104,25 +104,17 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index_part_documents.html">4. Documents</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sw_design.html">4.1. The SW-Design of <em>namedtupledefs</em></a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">4.2. The namedtupledefs API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#api">4.2.1. API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interfaces">4.2.1.1. Interfaces</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#class-options-by-interfaces">4.2.1.2. Class Options by Interfaces</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#basic-application-api">4.2.1.2.1. Basic Application API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#parameters">4.2.1.2.2. Parameters</a><ul>
-<li class="toctree-l6"><a class="reference internal" href="#fieldnames">4.2.1.2.2.1. fieldnames</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#fielddefaults">4.2.1.2.2.2. fielddefaults</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#module">4.2.1.2.2.3. module</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#rename">4.2.1.2.2.4. rename</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#typename">4.2.1.2.2.5. typename</a></li>
-<li class="toctree-l6"><a class="reference internal" href="#verbose">4.2.1.2.2.6. verbose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#class-options-by-interfaces">4.2.1. Class Options by Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fieldnames">4.2.1.1. fieldnames</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fielddefaults">4.2.1.2. fielddefaults</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module">4.2.1.3. module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rename">4.2.1.4. rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#typename">4.2.1.5. typename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verbose">4.2.1.6. verbose</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="#created-named-tuple-class">4.2.1.3. Created Named Tuple Class</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#resources">4.2.2. Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#created-named-tuple-class">4.2.2. Created Named Tuple Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resources">4.2.3. Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="namedtupledefs_init.html">4.3. namedtupledefs.__init__</a></li>
@@ -211,10 +203,6 @@ The initial set of interfaces forcusses on filesystem resources in a basic distr
 environment.
 This covers in particular a basic set of call parameters, which are common for a
 subset of the call interfaces.</p>
-<div class="section" id="api">
-<h2>4.2.1. API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="interfaces">
-<h3>4.2.1.1. Interfaces<a class="headerlink" href="#interfaces" title="Permalink to this headline">¶</a></h3>
 <style>
    div.apisynopsislarge blockquote {
       font-size: 1.5ch;
@@ -230,11 +218,9 @@ subset of the call interfaces.</p>
 </li>
 </ul>
 </div>
-</div></div>
-<div class="section" id="class-options-by-interfaces">
-<h3>4.2.1.2. Class Options by Interfaces<a class="headerlink" href="#class-options-by-interfaces" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="basic-application-api">
-<h4>4.2.1.2.1. Basic Application API<a class="headerlink" href="#basic-application-api" title="Permalink to this headline">¶</a></h4>
+</div><div class="section" id="class-options-by-interfaces">
+<h2>4.2.1. Class Options by Interfaces<a class="headerlink" href="#class-options-by-interfaces" title="Permalink to this headline">¶</a></h2>
+<p><strong>Basic Application API</strong></p>
 <p>The following table displays the parameters supported by the interfaces.</p>
 <blockquote>
 <div><div class="tabcolumncolor">
@@ -307,11 +293,9 @@ E.g.:</p>
 </dd>
 </dl>
 </div></blockquote>
-</div>
-<div class="section" id="parameters">
-<span id="namedtupledefsapi-parameters"></span><h4>4.2.1.2.2. Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
+<p id="namedtupledefsapi-parameters"><strong>Parameters</strong></p>
 <div class="section" id="fieldnames">
-<span id="param-fieldnames"></span><span id="index-0"></span><h5>4.2.1.2.2.1. fieldnames<a class="headerlink" href="#fieldnames" title="Permalink to this headline">¶</a></h5>
+<span id="param-fieldnames"></span><span id="index-0"></span><h3>4.2.1.1. fieldnames<a class="headerlink" href="#fieldnames" title="Permalink to this headline">¶</a></h3>
 <p>Symbolic names of fields with identical semantics as the standard library <em>collections.namedtuple</em>.
 When used in combination with the parameter <em>fielddefaults</em> the semantics changes to the behaviour
 of function parameters with default values, see <a class="reference internal" href="references.html#pyfunc" id="id2"><span>[PYFUNC]</span></a>.</p>
@@ -327,7 +311,7 @@ of function parameters with default values, see <a class="reference internal" hr
 <p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id3"><span>[namedtuple]</span></a>.</p>
 </div>
 <div class="section" id="fielddefaults">
-<span id="param-fielddefaults"></span><span id="index-1"></span><h5>4.2.1.2.2.2. fielddefaults<a class="headerlink" href="#fielddefaults" title="Permalink to this headline">¶</a></h5>
+<span id="param-fielddefaults"></span><span id="index-1"></span><h3>4.2.1.2. fielddefaults<a class="headerlink" href="#fielddefaults" title="Permalink to this headline">¶</a></h3>
 <p>Optional support for default values of <em>fieldnames</em>.
 A list of values.
 Same semantics as the function call interfaces <a class="reference internal" href="references.html#pyfunc" id="id4"><span>[PYFUNC]</span></a>,</p>
@@ -341,26 +325,26 @@ Same semantics as the function call interfaces <a class="reference internal" hre
 </div></blockquote>
 </div>
 <div class="section" id="module">
-<span id="param-module"></span><span id="index-2"></span><h5>4.2.1.2.2.3. module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h5>
+<span id="param-module"></span><span id="index-2"></span><h3>4.2.1.3. module<a class="headerlink" href="#module" title="Permalink to this headline">¶</a></h3>
 <p>Sets ‘<em>__module__</em>’ of the created class definition.
 Available beginning with <em>Python-3.6</em>.</p>
 <p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id6"><span>[namedtuple]</span></a>.</p>
 </div>
 <div class="section" id="rename">
-<span id="param-rename"></span><span id="index-3"></span><h5>4.2.1.2.2.4. rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h5>
+<span id="param-rename"></span><span id="index-3"></span><h3>4.2.1.4. rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
 <p>If <em>True</em> replaces silently invalid field names by
 ‘<em>_&lt;item-index&gt;</em>’.
 Available beginning with <em>Python-2.7</em>, in <em>Python3</em> beginning with  <em>Python-3.1</em> - so not in <em>Python-3.0</em>.</p>
 <p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id8"><span>[namedtuple]</span></a>.</p>
 </div>
 <div class="section" id="typename">
-<span id="param-typename"></span><span id="index-4"></span><h5>4.2.1.2.2.5. typename<a class="headerlink" href="#typename" title="Permalink to this headline">¶</a></h5>
+<span id="param-typename"></span><span id="index-4"></span><h3>4.2.1.5. typename<a class="headerlink" href="#typename" title="Permalink to this headline">¶</a></h3>
 <p>Name of returned class of type <em>namedtuple</em>.
 The actual registered top-level base class is <em>namedtupledefsABC</em> - underneath <em>object</em> of course.</p>
 <p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id10"><span>[namedtuple]</span></a>.</p>
 </div>
 <div class="section" id="verbose">
-<span id="param-verbose"></span><span id="index-5"></span><h5>4.2.1.2.2.6. verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h5>
+<span id="param-verbose"></span><span id="index-5"></span><h3>4.2.1.6. verbose<a class="headerlink" href="#verbose" title="Permalink to this headline">¶</a></h3>
 <p>Prints created class definition.</p>
 <p>See also <a class="reference external" href="genindex.html#P">usage of parameters</a>, and <a class="reference internal" href="references.html#namedtuple" id="id12"><span>[namedtuple]</span></a>.</p>
 <p>The call interface provides for groups of functions and classes with a set of
@@ -373,9 +357,8 @@ common parameters and additional context specific modifications.</p>
 <p>Various common options are supported, which may not be available for each interface.</p>
 </div>
 </div>
-</div>
 <div class="section" id="created-named-tuple-class">
-<span id="return-namedtuple"></span><h3>4.2.1.3. Created Named Tuple Class<a class="headerlink" href="#created-named-tuple-class" title="Permalink to this headline">¶</a></h3>
+<span id="return-namedtuple"></span><h2>4.2.2. Created Named Tuple Class<a class="headerlink" href="#created-named-tuple-class" title="Permalink to this headline">¶</a></h2>
 <p>The created named tuple class is extended by the default values <em>fielddefaults</em>,
 which is coverd by the creation interface.</p>
 <p>In addition the method “<a class="reference internal" href="namedtupledefs_init.html#dynamiccreatednamedtuple"><span class="std std-ref">_merge</span></a>” is added
@@ -384,9 +367,8 @@ The standard <em>collections.tuple</em> returns for the addition(merge) of named
 the base class <em>tuple</em>, while the <em>namedtupledef.namedtuple</em> returns a new instance
 of merged classes as a named tuple including combined default values.</p>
 </div>
-</div>
 <div class="section" id="resources">
-<span id="namedtupledefs-references"></span><h2>4.2.2. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<span id="namedtupledefs-references"></span><h2>4.2.3. Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="references.html#namedtuple" id="id13"><span>[namedtuple]</span></a> namedtuple - The Python Standard Library - lib/collections</p></li>
 <li><p><a class="reference internal" href="references.html#pyfunc" id="id14"><span>[PYFUNC]</span></a> The Python Language Reference - Function definitions</p></li>
@@ -416,7 +398,7 @@ of merged classes as a named tuple including combined default values.</p>
     <p>
         &copy; Copyright Copyright (C) 2016 Arno-Can Uestuensoez @Ingenieurbuero Arno-Can Uestuensoez
       <span class="lastupdated">
-        Last updated on Dec 05, 2019.
+        Last updated on Dec 06, 2019.
       </span>
 
     </p>

@@ -1,5 +1,6 @@
+********
 Abstract
-========
+********
 
 The *namedtupledefs* package provides a patched version of the original *collections.namedtuple*.
 The *namedtupledefs* package introduces: 

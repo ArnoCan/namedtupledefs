@@ -11,11 +11,6 @@ This covers in particular a basic set of call parameters, which are common for a
 subset of the call interfaces. 
 
 
-API
----
-Interfaces
-^^^^^^^^^^
-
 .. _IF_FACTORIES:
 
 .. raw:: html
@@ -41,12 +36,12 @@ Interfaces
    </div>
 
 Class Options by Interfaces
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 .. _API_PARAMS_BASIC::
 
-Basic Application API
-"""""""""""""""""""""
+**Basic Application API**
+
 The following table displays the parameters supported by the interfaces.
 
    .. raw:: html
@@ -104,10 +99,7 @@ The following table displays the parameters supported by the interfaces.
 
 .. _namedtupledefsAPI_PARAMETERS:
 
-Parameters
-""""""""""
-
-
+**Parameters**
 
 .. index::
    pair: parameters; fieldnames
@@ -116,7 +108,7 @@ Parameters
 .. _param_fieldnames:
 
 fieldnames
-''''''''''
+^^^^^^^^^^
 Symbolic names of fields with identical semantics as the standard library *collections.namedtuple*.
 When used in combination with the parameter *fielddefaults* the semantics changes to the behaviour
 of function parameters with default values, see [PYFUNC]_.  
@@ -139,7 +131,7 @@ See also `usage of parameters <genindex.html#P>`_, and [namedtuple]_.
 .. _param_fielddefaults:
 
 fielddefaults
-'''''''''''''
+^^^^^^^^^^^^^
 Optional support for default values of *fieldnames*.
 A list of values.
 Same semantics as the function call interfaces [PYFUNC]_,
@@ -157,7 +149,7 @@ Same semantics as the function call interfaces [PYFUNC]_,
 .. _param_module:
 
 module
-''''''
+^^^^^^
 Sets '*__module__*' of the created class definition.
 Available beginning with *Python-3.6*.
 
@@ -170,7 +162,7 @@ See also `usage of parameters <genindex.html#P>`_, and [namedtuple]_.
 .. _param_rename:
 
 rename
-''''''
+^^^^^^
 If *True* replaces silently invalid field names by
 '*_<item-index>*'.
 Available beginning with *Python-2.7*, in *Python3* beginning with  *Python-3.1* - so not in *Python-3.0*.
@@ -184,7 +176,7 @@ See also `usage of parameters <genindex.html#P>`_, and [namedtuple]_.
 .. _param_typename:
 
 typename
-''''''''
+^^^^^^^^
 Name of returned class of type *namedtuple*.
 The actual registered top-level base class is *namedtupledefsABC* - underneath *object* of course.
 
@@ -197,7 +189,7 @@ See also `usage of parameters <genindex.html#P>`_, and [namedtuple]_.
 .. _param_verbose:
 
 verbose
-'''''''
+^^^^^^^
 Prints created class definition.
 
 See also `usage of parameters <genindex.html#P>`_, and [namedtuple]_.
@@ -219,7 +211,7 @@ Various common options are supported, which may not be available for each interf
 .. _RETURN_namedtuple:
 
 Created Named Tuple Class
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 The created named tuple class is extended by the default values *fielddefaults*,
 which is coverd by the creation interface.
 
